@@ -1,7 +1,7 @@
 const web3 = require("./connect");
 
-const PRIVATE_KEY = "// put here private key"; //<= Pate your Private Key Here
-const RECEIVER = "0x7DCf6a8830df949486fc7980Bbff4603AF582204"; //<= Paste receiver address
+const PRIVATE_KEY = "0x41d3ba410a6ca9b53504aceb915acaef68f3d36201d43c00f650cf72e31ac97d"; //<= Pate your Private Key Here
+const RECEIVER = "0x01C1ca81a00E75321bBFb5abCC8184f40A06D3CD"; //<= Paste receiver address
 
 (async () => {
     const account = web3.eth.accounts.privateKeyToAccount(PRIVATE_KEY);

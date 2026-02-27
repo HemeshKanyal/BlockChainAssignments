@@ -1,6 +1,6 @@
 const web3 = require("./connect");
 
-const txHash = "0xf6a40ae5e654c7a82b1f9ee74629c443eac7490f73a5622c59c223bba76d9aad"; // <= Paste tx hash here
+const txHash = "0x7b2a992c3acf072b4de58b3642352b15361c569fd8d38f85e87a0a5c5dac3035"; // <= Paste tx hash here
 
 (async () => {
     const tx = await web3.eth.getTransaction(txHash);
@@ -12,6 +12,6 @@ const txHash = "0xf6a40ae5e654c7a82b1f9ee74629c443eac7490f73a5622c59c223bba76d9a
     console.log("Nonce: ", tx.nonce);
     const receipt = await web3.eth.getTransactionReceipt(txHash);
     console.log("\nStatus: ", receipt.status);
-    console.log("Gas used: ", receipt. gasUsed);
+    console.log("Gas used: ", receipt.gasUsed);
     console.log("Logs: ", receipt.logs);
 })();

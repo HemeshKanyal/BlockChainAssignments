@@ -7,8 +7,6 @@
 //const web3 = new
 // Web3('https://eth.llamarpc.com');
 // web3.eth.getBlockNumber().then(console.log);
-// PRIVATE_KEY=// put here private key
-
 
 import Web3 from "web3";
 
