@@ -1,5 +1,5 @@
 import Web3 from "web3";
-// export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+//export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 export const CONTRACT_ADDRESS = "0xd46197B32F4bB56460a0c478725a43f319c9A785";
 
 export const ABI = [
