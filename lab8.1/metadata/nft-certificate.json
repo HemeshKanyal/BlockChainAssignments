@@ -1,0 +1,15 @@
+{
+    "name": "B.Tech CSE - Hemesh",
+    "description": "Blockchain Course Certificate",
+    "image": "https://ipfs.io/ipfs/QmSF91vd3em9LEW18VQwF2wC71HQeC22uEPQsULiSJ8NrC",
+    "attributes": [
+        {
+            "trait_type": "University",
+            "value": "Bennett University"
+        },
+        {
+            "trait_type": "Course",
+            "value": "Blockchain Engineering"
+        }
+    ]
+}

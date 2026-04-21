@@ -23,8 +23,8 @@ async function transferTokens() {
     console.log("\n--- STEP 1: Transfer Tokens ---");
     console.log("Your address:", address);
 
-    const toAddress = "0x01C1ca81a00E75321bBFb5abCC8184f40A06D3CD";
-    const amountToSend = 100;
+    const toAddress = "0x4B9deBB89d9180Aec4C12561013233248e957AF9";
+    const amountToSend = 0.5;
     const decimals = 18;
 
     const abi = ["function transfer(address to, uint256 value)"];
@@ -136,10 +136,10 @@ async function transferFrom() {
 async function main() {
     try {
         // STEP 1: Transfer 100 tokens to the given address
-        // await transferTokens();
+        await transferTokens();
 
         // STEP 2: Approve 100 tokens allowance for the person next to you
-        await approveAllowance();
+        // await approveAllowance();
 
         // STEP 3: TransferFrom (needs spender's private key in .env)
         // await transferFrom();

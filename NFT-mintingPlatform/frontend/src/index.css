@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-white: #ffffff;
+  --primary-violet: #8b5cf6;
+  --violet-glow: rgba(139, 92, 246, 0.4);
+  --metallic-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 50%, #d1d5db 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --matte-bg: #f9fafb;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background-color: var(--matte-bg);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+/* Metallic utility */
+.metallic {
+  background: var(--metallic-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+              0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Violet glow effect */
+.violet-glow {
+  box-shadow: 0 0 20px var(--violet-glow);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  border-radius: 12px;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.primary-btn {
+  background: var(--primary-violet);
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background: #7c3aed;
+  box-shadow: 0 0 15px var(--violet-glow);
+}
+
+.secondary-btn {
+  background: white;
+  border: 1px solid var(--primary-violet);
+  color: var(--primary-violet);
+  padding: 12px 24px;
+}
+
+.secondary-btn:hover {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background: radial-gradient(circle at top right, var(--violet-glow), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.5), transparent 40%);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #1f2937, var(--primary-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
