@@ -1,0 +1,6 @@
+{
+  "name": "Shield",
+  "description": "A sturdy magical shield. Each shield adds +40 Defense when blocking.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/shield.png",
+  "attributes": [{"trait_type": "Type", "value": "Armor"}]
+}

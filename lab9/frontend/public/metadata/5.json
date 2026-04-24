@@ -1,0 +1,6 @@
+{
+  "name": "Champion Trophy",
+  "description": "A legendary trophy proving you defeated the Dark Dragon.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/trophy.png",
+  "attributes": [{"trait_type": "Type", "value": "Prize"}]
+}

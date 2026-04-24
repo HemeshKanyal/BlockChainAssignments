@@ -1,0 +1,6 @@
+{
+  "name": "Gold Coin",
+  "description": "Gold coins — the currency of champions. Having gold grants bonus HP.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/gold.png",
+  "attributes": [{"trait_type": "Type", "value": "Currency"}]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Sword",
+  "description": "A sharp enchanted blade. Each sword adds +50 Attack Power in the arena.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/sword.png",
+  "attributes": [{"trait_type": "Type", "value": "Weapon"}]
+}

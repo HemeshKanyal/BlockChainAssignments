@@ -1,0 +1,6 @@
+{
+  "name": "Silver Coin",
+  "description": "Silver coins — the basic currency. Earned for participating.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/silver.png",
+  "attributes": [{"trait_type": "Type", "value": "Currency"}]
+}

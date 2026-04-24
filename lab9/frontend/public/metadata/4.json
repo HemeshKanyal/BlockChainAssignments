@@ -1,0 +1,6 @@
+{
+  "name": "Crown",
+  "description": "A legendary royal crown. Grants +25 ATK, +25 DEF, and +50 HP.",
+  "image": "https://raw.githubusercontent.com/HemeshKanyal/BlockChainAssignments/main/lab9/frontend/public/assets/crown.png",
+  "attributes": [{"trait_type": "Type", "value": "Collectible"}]
+}
