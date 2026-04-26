@@ -1,0 +1,15 @@
+{
+    "name": "Silver Coin",
+    "description": "Secondary in-game currency with moderate value.",
+    "image": "ipfs://QmZ2RBJt8796ER1FYf4RDqHXBxNw9y6XthHHXbPYXVzGHH",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Currency"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

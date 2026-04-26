@@ -1,0 +1,145 @@
+.game-arena {
+  min-height: 100vh;
+  padding: 85px 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.game-header {
+  text-align: center;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.game-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, var(--hp-red), #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.3rem;
+}
+
+.game-header p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.game-stats-bar {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.game-stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+}
+
+.game-stat-chip .label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.game-stat-chip .value {
+  color: var(--gold);
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.game-canvas-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--border-subtle);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.15), 0 0 80px rgba(0, 0, 0, 0.5);
+  animation: scaleIn 0.5s ease-out;
+  max-width: 800px;
+  width: 100%;
+}
+
+.game-canvas-wrapper canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.game-controls-info {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.control-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.control-tip kbd {
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Defeat overlay */
+.defeat-overlay {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.defeat-overlay h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--hp-red);
+  margin-bottom: 0.5rem;
+}
+
+.defeat-overlay p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.defeat-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .game-arena {
+    padding: 75px 0.5rem 1rem;
+    gap: 1rem;
+  }
+  .game-stats-bar {
+    gap: 0.5rem;
+  }
+  .game-stat-chip {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}

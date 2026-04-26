@@ -1,0 +1,15 @@
+{
+    "name": "Gold Coin",
+    "description": "In-game currency used for trading and upgrades.",
+    "image": "ipfs://QmVDJseew3yrT47xgwXETweHDgS9WLRib3pr37Vafd85Xa",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Currency"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

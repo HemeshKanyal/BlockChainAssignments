@@ -1,0 +1,19 @@
+{
+    "name": "Shield",
+    "description": "A strong shield used for defense.",
+    "image": "ipfs://QmScrw3KzRJn8w9ioy32CaDZaqt4bioYQDEYu84dEXrJ7b",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Armor"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        },
+        {
+            "trait_type": "Defense",
+            "value": "40"
+        }
+    ]
+}

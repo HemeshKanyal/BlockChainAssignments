@@ -1,0 +1,19 @@
+{
+    "name": "Crown",
+    "description": "A unique royal crown representing power.",
+    "image": "ipfs://QmcDXfS3QGF1MADgczEQY1JsHgw3EdKAnUy4H6Nt4NVvcE",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Collectible"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Epic"
+        },
+        {
+            "trait_type": "Unique",
+            "value": "Yes"
+        }
+    ]
+}

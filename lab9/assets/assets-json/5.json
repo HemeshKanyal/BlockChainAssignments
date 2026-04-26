@@ -1,0 +1,19 @@
+{
+    "name": "Champion Trophy",
+    "description": "Awarded to the winner of the game.",
+    "image": "ipfs://QmS6E2sXJoGTUWwrbhVtKkKnTG7v3Ezy8CFHhwKdp7PDk9",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Prize"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        },
+        {
+            "trait_type": "Winner",
+            "value": "True"
+        }
+    ]
+}

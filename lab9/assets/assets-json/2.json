@@ -1,0 +1,19 @@
+{
+    "name": "Sword",
+    "description": "A sharp weapon used for attacking enemies.",
+    "image": "ipfs://QmdFr9zyVFYWaB51b86dKPJtrtS2gHjyxL8JWgtuKhKALu",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Weapon"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        },
+        {
+            "trait_type": "Attack",
+            "value": "50"
+        }
+    ]
+}
