@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IPFS Storage App</title>
+</head>
+
+<body>
+
+    <h2>Upload File to IPFS</h2>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+
+    <p id="cidResult"></p>
+
+    <hr>
+
+    <h2>Retrieve File from IPFS</h2>
+    <input type="text" id="cidInput" placeholder="Enter CID">
+    <button onclick="getFile()">Get File</button>
+
+    <br><br>
+    <a id="downloadLink" target="_blank"></a>
+
+    <script>
+        const API_URL = "http://localhost:3001";
+        const SECRET_KEY_TEXT = "my-secret-key";
+
+        // Helper to convert text to a cryptographic key
+        async function getKey() {
+            const enc = new TextEncoder();
+            const keyData = enc.encode(SECRET_KEY_TEXT);
+            const hash = await crypto.subtle.digest("SHA-256", keyData);
+            return await crypto.subtle.importKey(
+                "raw",
+                hash,
+                { name: "AES-CBC" },
+                false,
+                ["encrypt", "decrypt"]
+            );
+        }
+
+        const iv = new Uint8Array(16); // 16 zero bytes for IV
+
+        async function uploadFile() {
+            const fileInput = document.getElementById("fileInput");
+            if (!fileInput.files[0]) return alert("Select a file first");
+
+            const file = fileInput.files[0];
+            const arrayBuffer = await file.arrayBuffer();
+
+            // 🔐 Encrypt on frontend
+            const key = await getKey();
+            const encryptedData = await crypto.subtle.encrypt(
+                { name: "AES-CBC", iv },
+                key,
+                arrayBuffer
+            );
+
+            const formData = new FormData();
+            const blob = new Blob([encryptedData]);
+            formData.append("file", blob, file.name);
+
+            document.getElementById("cidResult").innerText = "Encrypting and Uploading...";
+
+            const res = await fetch(`${API_URL}/upload`, {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await res.json();
+            document.getElementById("cidResult").innerText = "CID: " + data.cid;
+        }
+
+        async function getFile() {
+            const cid = document.getElementById("cidInput").value;
+            if (!cid) return alert("Enter CID");
+
+            try {
+                // Fetch encrypted file from backend
+                const res = await fetch(`${API_URL}/file/${cid}`);
+                const encryptedBuffer = await res.arrayBuffer();
+
+                // 🔓 Decrypt on frontend
+                const key = await getKey();
+                const decryptedBuffer = await crypto.subtle.decrypt(
+                    { name: "AES-CBC", iv },
+                    key,
+                    encryptedBuffer
+                );
+
+                // Create a download link
+                const blob = new Blob([decryptedBuffer]);
+                const url = URL.createObjectURL(blob);
+                const link = document.getElementById("downloadLink");
+                link.href = url;
+                link.download = "decrypted_file";
+                link.innerText = "Download Decrypted File";
+                link.style.display = "block";
+
+            } catch (e) {
+                console.error(e);
+                alert("Decryption failed. Ensure the CID is correct and was encrypted with the same key.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
